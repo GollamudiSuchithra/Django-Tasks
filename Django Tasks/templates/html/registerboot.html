@@ -1,0 +1,40 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Registration</title>
+	<meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</head>
+<body>
+	<form action="{% url 'registerboot' %}" method="post">
+	    {% csrf_token %}
+		<input class="container" type="text" name="fname" placeholder="Enter first name"><br>
+		<input class="container" type="text" name="lname" placeholder="Enter lastname"><br>
+		<input class="container" type="name" name="email" placeholder="Enter username"><br>
+		<input class="container" type="name" name="phno" placeholder="Enter phone number"><br>
+		<h3 class="bg-primary">gender</h3>
+		<input type="radio" id="male" name="gender" value="male">
+		<label for="male">Male</label></br>
+		<input type="radio" id="female" name="gender" value="female">
+		<label for="female">Female</label></br>
+		<input type="radio" id="other" name="gender" value="other">
+		<label for="other">Other</label></br>
+		<label class="bg-success">Address</label></br>
+		<input class="container" type="textarea" name="address" placeholder="Enter address"></br>
+		<h2 class="bg-info">Languages known</h2>
+		<label>English</label>
+		<input type="checkbox"  name="Languages" value="English"></br>
+		<label>Telugu</label>
+		<input type="checkbox"  name="Languages" value="Telugu"></br>
+		<label>Hindi</label>
+		<input type="checkbox"  name="Languages" value="Hindi"></br>
+        <input type="submit" name="submit" value="Submit"></br>
+	</form>
+</body>
+</html>

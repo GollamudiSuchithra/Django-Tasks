@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Profile</title>
+</head>
+<body>
+	<form action="{% url 'login' %}" method="post" method="GET">
+	    {% csrf_token %}
+		<h1>Login Successful</h1>
+		<label>Welcome to your profile</label>
+		<button type="Submit">Logout</button>
+	</form>
+</body>
+</html>
